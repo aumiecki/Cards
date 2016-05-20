@@ -4,6 +4,7 @@
     Public CardBack As Image
     Dim tablePictures As New List(Of PictureBox)
 
+    ' Load card back image
     Private Sub frmCards_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         For suitNumber As Integer = 1 To 4
             For cardNumber As Integer = 1 To 13
@@ -22,6 +23,7 @@
         Next
     End Sub
 
+    ' Pick 5 button picks 5 random cards
     Private Sub btnPic5_Click(sender As Object, e As EventArgs) Handles btnPic5.Click
         For Each item As Card In Deck
             tempDeck.Add(item)
@@ -43,6 +45,7 @@
         lblValue.Text = value.ToString()
     End Sub
 
+    ' Exit button
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         System.Environment.Exit(0)
     End Sub
